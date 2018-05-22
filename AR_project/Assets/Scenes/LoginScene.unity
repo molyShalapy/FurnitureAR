@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6893767}
   - component: {fileID: 6893766}
   m_Layer: 5
-  m_Name: Text
+  m_Name: pwdTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 531220972}
   - component: {fileID: 531220971}
   - component: {fileID: 531220970}
+  - component: {fileID: 531220973}
   m_Layer: 5
   m_Name: username
   m_TagString: Untagged
@@ -591,6 +592,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 531220968}
+--- !u!114 &531220973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531220968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee03d59f0d8ff34a9245a88b803499e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1270642951}
 --- !u!1 &720103977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,7 +1022,6 @@ GameObject:
   - component: {fileID: 1364998072}
   - component: {fileID: 1364998071}
   - component: {fileID: 1364998070}
-  - component: {fileID: 1364998073}
   m_Layer: 5
   m_Name: btnLogin
   m_TagString: Untagged
@@ -1075,9 +1087,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1364998073}
-        m_MethodName: getData
-        m_Mode: 1
+      - m_Target: {fileID: 531220973}
+        m_MethodName: get_username
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2030459987}
+        m_MethodName: get_pwd
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1121,17 +1144,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364998068}
---- !u!114 &1364998073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364998068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e756c835dfaf64ca7639d634bee40b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1403633893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1537,7 @@ GameObject:
   - component: {fileID: 2030459986}
   - component: {fileID: 2030459985}
   - component: {fileID: 2030459984}
+  - component: {fileID: 2030459987}
   m_Layer: 5
   m_Name: password
   m_TagString: Untagged
@@ -1649,6 +1662,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2030459982}
+--- !u!114 &2030459987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030459982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487347e5ac5436b43acdae23da1527ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6893766}
 --- !u!1 &2069663765
 GameObject:
   m_ObjectHideFlags: 0
