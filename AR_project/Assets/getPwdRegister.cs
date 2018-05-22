@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class getUsername : MonoBehaviour {
+public class getPwdRegister : MonoBehaviour {
+
     [SerializeField] Text text;
-    public void get_username(string usrname)
+    public void get_pwd(string pwd)
     {
-        text.text = usrname;
+        text.text = pwd;
         Debug.Log(text.text);
     }
-   
 }

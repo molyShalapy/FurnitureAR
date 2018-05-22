@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 109040955}
   - component: {fileID: 109040954}
   m_Layer: 5
-  m_Name: Text
+  m_Name: usrTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 1267508619}
   - component: {fileID: 1267508618}
   - component: {fileID: 1267508617}
+  - component: {fileID: 1267508620}
   m_Layer: 5
   m_Name: email
   m_TagString: Untagged
@@ -674,13 +675,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1267508618}
   m_TextComponent: {fileID: 1988992246}
   m_Placeholder: {fileID: 182378886}
-  m_ContentType: 0
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -732,6 +733,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267508615}
+--- !u!114 &1267508620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1267508615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23405c33ea14760469a3491109e71e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1988992246}
 --- !u!1 &1276420134
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +913,7 @@ GameObject:
   - component: {fileID: 1498650417}
   - component: {fileID: 1498650416}
   - component: {fileID: 1498650415}
+  - component: {fileID: 1498650418}
   m_Layer: 5
   m_Name: username
   m_TagString: Untagged
@@ -1024,6 +1038,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1498650413}
+--- !u!114 &1498650418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498650413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8693c890f55207f4783760215e86bc3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 109040954}
 --- !u!1 &1673749026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1262,7 @@ GameObject:
   - component: {fileID: 1796966419}
   - component: {fileID: 1796966418}
   m_Layer: 5
-  m_Name: Text
+  m_Name: pwdTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1442,7 +1468,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1844735293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1498650418}
+        m_MethodName: get_username
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2015835811}
+        m_MethodName: get_pwd
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1267508620}
+        m_MethodName: get_email
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1844735293
@@ -1489,7 +1548,7 @@ GameObject:
   - component: {fileID: 1988992247}
   - component: {fileID: 1988992246}
   m_Layer: 5
-  m_Name: Text
+  m_Name: emailTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,6 +1622,7 @@ GameObject:
   - component: {fileID: 2015835810}
   - component: {fileID: 2015835809}
   - component: {fileID: 2015835808}
+  - component: {fileID: 2015835811}
   m_Layer: 5
   m_Name: password
   m_TagString: Untagged
@@ -1629,8 +1689,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2015835809}
   m_TextComponent: {fileID: 1796966418}
   m_Placeholder: {fileID: 1023943919}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -1687,3 +1747,15 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015835806}
+--- !u!114 &2015835811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015835806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf9d76ea063bc046a532f05da922313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1796966418}

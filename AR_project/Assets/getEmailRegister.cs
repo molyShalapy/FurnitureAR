@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class getUsername : MonoBehaviour {
+public class getEmailRegister : MonoBehaviour {
+
     [SerializeField] Text text;
-    public void get_username(string usrname)
+    public void get_email(string email)
     {
-        text.text = usrname;
+        text.text = email;
         Debug.Log(text.text);
     }
-   
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class getUsername : MonoBehaviour {
+public class getSearchKey : MonoBehaviour {
+
     [SerializeField] Text text;
-    public void get_username(string usrname)
+    public void get_word(string searchKW)
     {
-        text.text = usrname;
+        text.text = searchKW;
         Debug.Log(text.text);
     }
-   
 }
