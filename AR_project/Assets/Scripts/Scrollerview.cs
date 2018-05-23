@@ -6,21 +6,19 @@ public class Scrollerview : MonoBehaviour {
 
     public GameObject prefab;
 
-    // Use this for initialization
     void Start () {
         Populate();
     }
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
 
     void Populate()
     {
-        GameObject newObj; // Create GameObject instance
+        GameObject newObj;
 
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 17; i++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
         }
