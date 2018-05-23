@@ -22,11 +22,7 @@ public class Scrollerview : MonoBehaviour {
 
         for (int i = 0; i < 12; i++)
         {
-            // Create new instances of our prefab until we've created as many as we specified
             newObj = (GameObject)Instantiate(prefab, transform);
-
-            // Randomize the color of our image
-          //  newObj.GetComponent().color = Random.ColorHSV();
         }
 
     }
