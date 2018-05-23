@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -284,8 +284,8 @@ MonoBehaviour:
   m_Content: {fileID: 1846601966}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
+  m_MovementType: 2
+  m_Elasticity: 3
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 1
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_HorizontalScrollbarVisibility: 2
   m_VerticalScrollbarVisibility: 2
   m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 689312248}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1027,9 +1027,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1846601966}
-  - component: {fileID: 1846601969}
   - component: {fileID: 1846601968}
   - component: {fileID: 1846601967}
+  - component: {fileID: 1846601969}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1052,8 +1052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00000938892}
-  m_SizeDelta: {x: -183, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000005869869}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1846601967
 MonoBehaviour:
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca9a51b379ab6e49879dea05f125c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1377920059799958, guid: 3d1045e222f84b24f9b007b52367bd17, type: 2}
+  prefab: {fileID: 1206080587509948, guid: 8d4b8a22b7447b14e8155207c9bed1b5, type: 2}
 --- !u!114 &1846601968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &1846601969
 MonoBehaviour:
@@ -1088,20 +1088,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846601965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 2
+    m_Right: 2
+    m_Top: 10
+    m_Bottom: 50
   m_ChildAlignment: 0
-  m_Spacing: 5
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 45, y: 45}
+  m_Spacing: {x: 20, y: 25}
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1 &1894768871
 GameObject:
   m_ObjectHideFlags: 0
