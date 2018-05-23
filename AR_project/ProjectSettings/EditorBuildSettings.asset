@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RegistrationScene.unity
     guid: ce13bfb4769e2734087c5ee03a0cf14b
-  - enabled: 1
-    path: Assets/Scenes/ResultScene.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/7d60b4bc02a5cc04a9dd8b63163426c5
     guid: 7d60b4bc02a5cc04a9dd8b63163426c5
-  - enabled: 1
-    path: Assets/Scenes/SideMenueScrene.unity
+  - enabled: 0
+    path: Assets/Scenes/Button.unity
     guid: 5638a9aec8d123447a6ed1245ad04c78
   - enabled: 1
     path: Assets/Scenes/splashScreen.unity
     guid: 23654432e167fd14aa1374202834c842
+  - enabled: 1
+    path: Assets/Scenes/ResultScene.unity
+    guid: 58cc51eeb432de54690f6dceedaf66c8
+  - enabled: 1
+    path: Assets/Scenes/SideMenueScrene.unity
+    guid: a5987d8ed46c9084d98fc028d4b48470
