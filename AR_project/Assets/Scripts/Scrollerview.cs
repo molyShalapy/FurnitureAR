@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Scrollerview : MonoBehaviour {
 
@@ -18,11 +20,19 @@ public class Scrollerview : MonoBehaviour {
     {
         GameObject newObj;
 
-        for (int i = 0; i < 17; i++)
+        List<GameObject> obs = new List<GameObject>();
+        for (int t = 0; t < 17; t++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
+           var button=newObj.transform.GetComponentInChildren<Button>();
+            button.onClick.AddListener(OnPointerClick);
         }
+    }
+    public void OnPointerClick( )
+    {
 
+        Debug.Log("loaded");
+        Application.LoadLevel("ProductDetailsScreen");
     }
 
 }
