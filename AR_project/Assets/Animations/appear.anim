@@ -20,8 +20,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
+<<<<<<< HEAD
         time: 0
         value: -234
+=======
+        time: 0.05
+        value: -70.2
+>>>>>>> 26c0a88b69dc4a0fe4f35fb64d5d9dd8e08f3efb
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -114,8 +119,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
+<<<<<<< HEAD
         time: 0
         value: -234
+=======
+        time: 0.05
+        value: -70.2
+>>>>>>> 26c0a88b69dc4a0fe4f35fb64d5d9dd8e08f3efb
         inSlope: 0
         outSlope: 0
         tangentMode: 136
