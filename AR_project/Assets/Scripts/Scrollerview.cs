@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Scrollerview : MonoBehaviour {
@@ -32,7 +33,12 @@ public class Scrollerview : MonoBehaviour {
     {
 
         Debug.Log("loaded");
-        Application.LoadLevel("ProductDetailsScreen");
+        // Application.LoadLevel("ProductDetailsScreen");
+
+        SceneManager.LoadScene("ProductDetailsScreen");//, LoadSceneMode.Additive);
+
+        //SceneManager.UnloadSceneAsync("ResultScene");
+
     }
 
 }
