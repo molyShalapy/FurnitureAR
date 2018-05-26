@@ -28,7 +28,7 @@ public class Scrollerview : MonoBehaviour {
     }
     // Dictionary<string,string> dictprod;
 
-    List<Product> allprod ;
+    List<Product> allprod;
 
 
 /*****************************all data*******************************************/
@@ -61,6 +61,7 @@ public class Scrollerview : MonoBehaviour {
     }
 
     /**********************************Search*******************************************/
+    public GameObject content;
     enum categories { chair = 1, sofa = 2, table = 3 }
     enum models { modern = 1, classic = 2 }
     string model, category;
@@ -95,6 +96,10 @@ public class Scrollerview : MonoBehaviour {
                     filter.Add(p);
                 }
         }
+        foreach (Transform child in content.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         Populate(filter); //## byrsm 3al 2deem 
 
     }
@@ -107,13 +112,18 @@ public class Scrollerview : MonoBehaviour {
         for (int t = 0; t < prod.Count; t++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
-            var button = newObj.transform.GetComponentInChildren<Button>();
-            button.onClick.AddListener(delegate { OnPointerClick(prod[2]); });//## static 
-           
+            //## static 
+            AddButton(newObj, prod[t]);
             newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
 
         }
       //  Debug.Log(prod.Count);
+    }
+   
+    void AddButton(GameObject obj, Product p1)
+    {
+        var button = obj.transform.GetComponentInChildren<Button>();
+        button.onClick.AddListener(delegate { OnPointerClick(p1); });
     }
 
     public static Product MyProduct { get; set; }
@@ -123,10 +133,10 @@ public class Scrollerview : MonoBehaviour {
     {
         //  Debug.Log(p);
         MyProduct = p;
-        Debug.Log("loaded");
+       // Debug.Log(p);
         // Application.LoadLevel("ProductDetailsScreen");
 
-        SceneManager.LoadScene("ProductDetailsScreen");//, LoadSceneMode.Additive);
+       SceneManager.LoadScene("ProductDetailsScreen");//, LoadSceneMode.Additive);
 
         //SceneManager.UnloadSceneAsync("ResultScene");
 
