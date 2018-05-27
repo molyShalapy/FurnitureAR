@@ -6,7 +6,7 @@ public class Product
 {
     public string name;
     public string category;
-
     public string model;
-
+    public string id;
+    public string color;
 }

@@ -1,11 +1,8 @@
 ﻿using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,15 +16,6 @@ public class Scrollerview : MonoBehaviour {
         InitializeFirebase();
     }
 
-    void Start () {
-        
-    }
-
-    void Update() {
-
-    }
-    // Dictionary<string,string> dictprod;
-
     List<Product> allprod;
 
 
@@ -36,7 +24,7 @@ public class Scrollerview : MonoBehaviour {
     {
         allprod = new List<Product>();
         FirebaseApp app = FirebaseApp.DefaultInstance;
-        app.SetEditorDatabaseUrl("https://ar-v1-9684e.firebaseio.com/");
+        app.SetEditorDatabaseUrl("https://ar-v1-ce36f.firebaseio.com/");
         FirebaseDatabase.DefaultInstance
             .GetReference("product").OrderByChild("category")
             .ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
@@ -52,7 +40,9 @@ public class Scrollerview : MonoBehaviour {
                         {
                             name = childSnapshot.Child("name").Value.ToString(),
                             category = childSnapshot.Child("category").Value.ToString(),
-                            model = childSnapshot.Child("model").Value.ToString()
+                            model = childSnapshot.Child("model").Value.ToString(),
+                            id = childSnapshot.Child("id").Value.ToString(),
+                            color = childSnapshot.Child("color").Value.ToString()
                         });
                     }
                     Populate(allprod);
@@ -67,8 +57,7 @@ public class Scrollerview : MonoBehaviour {
     string model, category;
     public void search()
     {
-        //SceneView.RepaintAll();
-     //   EditorUtility.SetDirty(this);              
+                 
         List<Product> filter = new List<Product>();
         if (categDDL.value > 0 && modelDDL.value > 0)
         {
@@ -107,7 +96,7 @@ public class Scrollerview : MonoBehaviour {
     public  void Populate( List<Product> prod)
     {
         GameObject newObj;
-        Debug.Log(prod.Count);
+        //Debug.Log(prod.Count);
 
         for (int t = 0; t < prod.Count; t++)
         {
@@ -117,7 +106,6 @@ public class Scrollerview : MonoBehaviour {
             newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
 
         }
-      //  Debug.Log(prod.Count);
     }
    
     void AddButton(GameObject obj, Product p1)
@@ -131,14 +119,9 @@ public class Scrollerview : MonoBehaviour {
     /**********************************Details***************************************************/
     public void OnPointerClick(Product p )
     {
-        //  Debug.Log(p);
         MyProduct = p;
-       // Debug.Log(p);
-        // Application.LoadLevel("ProductDetailsScreen");
+        SceneManager.LoadScene("ProductDetailsScreen");
 
-       SceneManager.LoadScene("ProductDetailsScreen");//, LoadSceneMode.Additive);
-
-        //SceneManager.UnloadSceneAsync("ResultScene");
 
     }
 
