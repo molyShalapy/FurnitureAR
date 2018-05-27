@@ -14,7 +14,8 @@ public class Details : MonoBehaviour {
         GameObject.Find("txtname").GetComponent<Text>().text = Scrollerview.MyProduct.name;
         GameObject.Find("txtcategory").GetComponent<Text>().text = Scrollerview.MyProduct.category;
         GameObject.Find("txtmodel").GetComponent<Text>().text = Scrollerview.MyProduct.model;
-        GameObject.Find("btnColor").GetComponent<Text>().text = Scrollerview.MyProduct.color;
+        GameObject.Find("txtColor").GetComponent<Text>().text = Scrollerview.MyProduct.color;
+        GameObject.Find("txtPrice").GetComponent<Text>().text = Scrollerview.MyProduct.price;
 
     }
 

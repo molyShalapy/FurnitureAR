@@ -41,8 +41,9 @@ public class Scrollerview : MonoBehaviour {
                             name = childSnapshot.Child("name").Value.ToString(),
                             category = childSnapshot.Child("category").Value.ToString(),
                             model = childSnapshot.Child("model").Value.ToString(),
-                            id = childSnapshot.Child("id").Value.ToString(),
-                            color = childSnapshot.Child("color").Value.ToString()
+                            //id = childSnapshot.Child("id").Value.ToString(),
+                            color = childSnapshot.Child("color").Value.ToString(),
+                            price = childSnapshot.Child("price").Value.ToString()
                         });
                     }
                     Populate(allprod);
