@@ -26,7 +26,7 @@ public class Scrollerview : MonoBehaviour {
         FirebaseApp app = FirebaseApp.DefaultInstance;
         app.SetEditorDatabaseUrl("https://ar-v1-ce36f.firebaseio.com/");
         FirebaseDatabase.DefaultInstance
-            .GetReference("product").OrderByChild("category")
+            .GetReference("Products").OrderByChild("category")
             .ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
                 if (e2.DatabaseError != null)
                 {
@@ -96,7 +96,6 @@ public class Scrollerview : MonoBehaviour {
     public  void Populate( List<Product> prod)
     {
         GameObject newObj;
-        //Debug.Log(prod.Count);
 
         for (int t = 0; t < prod.Count; t++)
         {
