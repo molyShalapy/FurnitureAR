@@ -1,6 +1,7 @@
 ﻿using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -43,7 +44,8 @@ public class Scrollerview : MonoBehaviour {
                             model = childSnapshot.Child("model").Value.ToString(),
                             //id = childSnapshot.Child("id").Value.ToString(),
                             color = childSnapshot.Child("color").Value.ToString(),
-                            price = childSnapshot.Child("price").Value.ToString()
+                            price = childSnapshot.Child("price").Value.ToString(),
+                            image = childSnapshot.Child("image").Value.ToString()
                         });
                     }
                     Populate(allprod);
@@ -112,7 +114,41 @@ public class Scrollerview : MonoBehaviour {
     {
         var button = obj.transform.GetComponentInChildren<Button>();
         button.onClick.AddListener(delegate { OnPointerClick(p1); });
+        StartCoroutine(loadSpriteImageFromUrl(p1.image, obj));
+
     }
+
+    /*******************************add image*************************************/
+
+    IEnumerator loadSpriteImageFromUrl(string URL, GameObject obj)
+    {
+
+        WWW www = new WWW(URL);
+        while (!www.isDone)
+        {
+            Debug.Log("Download image on progress" + www.progress);
+            yield return null;
+        }
+
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log("Download failed");
+        }
+        else
+        {
+            Debug.Log("Download succes");
+            Texture2D texture = new Texture2D(1, 1);
+            www.LoadImageIntoTexture(texture);
+
+            Sprite sprite = Sprite.Create(texture,
+                new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+
+            var myim = obj.transform.GetComponentInChildren<Image>();
+            myim.sprite = sprite;
+        }
+    }
+
+
 
     public static Product MyProduct { get; set; }
 

@@ -10,4 +10,6 @@ public class Product
     //public string id;
     public string color;
     public string price;
+    public string image;
+
 }
