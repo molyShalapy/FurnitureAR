@@ -29,6 +29,7 @@ public class Login : MonoBehaviour {
             if (task.IsCanceled)
             {
                 Debug.LogError("Sign IN now.");
+                ErrorText.text = "You can't sign in with this email or password!";
                 return;
             }
             if (task.IsFaulted)
@@ -36,14 +37,16 @@ public class Login : MonoBehaviour {
                 Debug.LogError("SignInWithEmailAndPasswordAsync error: " + task.Exception);
                 if (task.Exception.InnerExceptions.Count > 0)
                     //  UpdateErrorMessage(task.Exception.InnerExceptions[0].Message);
-                    return;
+                    ErrorText.text = "You can't sign in with this email or password!";
+
+                return;
             }
 
             FirebaseUser user = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
 
-            SceneManager.LoadScene("ResultScene");
+            //SceneManager.LoadScene("ResultScene");
         });
     }
 }
