@@ -29,24 +29,24 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ResultScene.unity
     guid: e73192d3fa231194385c220c1a18f10a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ProductDetailsScreen.unity
     guid: 6d51ed5559eecdc4f8d0fe62a697ed34
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LoginScene.unity
     guid: bebef526276f0ab408f270c0de1eb17e
   - enabled: 1
     path: Assets/Scenes/RegistrationScene.unity
     guid: a976e70315810c24ea929a92eef23f18
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/splashScreen.unity
     guid: 12dfe14c8f867494e9392dc8040e8924
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HelpScene.unity
     guid: 5174a81c513c3cb4eb0b06395e10c9e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Profile.unity
     guid: b6f91158cb996c24ab4e87d9679558de
