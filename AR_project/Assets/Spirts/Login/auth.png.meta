@@ -7,6 +7,9 @@ TextureImporter:
     21300000: pattern (1)_0
     21300002: pattern (1)_1
     21300004: pattern (1)_2
+    21300006: auth_0
+    21300008: auth_2
+    21300010: auth_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -83,41 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pattern (1)_0
+      name: auth_0
       rect:
         serializedVersion: 2
-        x: 438
-        y: 265
-        width: 77
-        height: 67
+        x: 106
+        y: 203
+        width: 54
+        height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 5, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern (1)_1
-      rect:
-        serializedVersion: 2
-        x: 562
-        y: 176
-        width: 72
-        height: 67
-      alignment: 9
-      pivot: {x: 0.7107573, y: 0.256084}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pattern (1)_2
+      name: auth_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 73
-        width: 77
-        height: 68
+        x: 90
+        y: 111
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: auth_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 25
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
