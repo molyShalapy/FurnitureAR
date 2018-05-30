@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FloorPlaneManager : MonoBehaviour {
     public LayerMask layerMask;
-<<<<<<< HEAD
+//<<<<<<< HEAD
    
-=======
-    void Start()
-    {
+//=======
+//    void Start()
+//    {
 
-    }
->>>>>>> 3811dd31989c61717040fe07dbe538aab636215b
+//    }
+//>>>>>>> 3811dd31989c61717040fe07dbe538aab636215b
     Lean.Touch.LeanScale current;
     public void OnHeld()
     {
