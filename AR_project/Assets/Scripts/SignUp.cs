@@ -65,11 +65,13 @@ public class SignUp : MonoBehaviour {
         {
             if (task.IsCanceled)
             {
+                ErrorText.enabled = true;
                 Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
                 return;
             }
             if (task.IsFaulted)
             {
+                ErrorText.enabled = true;
                 Debug.LogError("CreateUserWithEmailAndPasswordAsync error: " + task.Exception);
                 if (task.Exception.InnerExceptions.Count > 0)
                     //   UpdateErrorMessage(task.Exception.InnerExceptions[0].Message);
@@ -91,7 +93,10 @@ public class SignUp : MonoBehaviour {
 
             reference.Child(newUser.UserId).SetRawJsonValueAsync(json);
             Debug.LogError("user added");
+            ErrorText.enabled = false;
 
+
+            SceneManager.LoadScene("ResultScene");
 
 
             //  UpdateErrorMessage("Signup Success");

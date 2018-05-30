@@ -23,12 +23,14 @@ public class Login : MonoBehaviour {
         {
             if (task.IsCanceled)
             {
+                ErrorText.enabled = true;
                 Debug.LogError("Sign IN now.");
                 ErrorText.text = "You can't sign in with this email or password!";
                 return;
             }
             if (task.IsFaulted)
             {
+                ErrorText.enabled = true;
                 Debug.LogError("SignInWithEmailAndPasswordAsync error: " + task.Exception);
                 if (task.Exception.InnerExceptions.Count > 0)
                     ErrorText.text = "You can't sign in with this email or password!";
@@ -39,6 +41,9 @@ public class Login : MonoBehaviour {
             FirebaseUser user = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
+            ErrorText.enabled = false;
+
+            SceneManager.LoadScene("ResultScene");
 
         });
     }
