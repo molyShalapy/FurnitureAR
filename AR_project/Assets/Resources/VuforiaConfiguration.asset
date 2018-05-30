@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
+<<<<<<< HEAD
     vuforiaLicenseKey: AUoTE7f/////AAABmeRgI9FYtkuUknOxrkYQt00aY9uiixaX8P73iZuAeV2BeVcHMqsPC4Nak/ZKgf/yzKeWlOsxtHlGwwsxixg6Gstr3uUnqD2uOSDuacx+EM99lEBeidi8EVzpmqoYW8k5H5aSlELbQSVq21LT6NPdSqqz3bpEUJQ9sbdJ/3bvLJImL6To3t4mqOmWqPgPNZm060dNoCjYV0XuASifK/KBUm6yLUEQqfHT8LK3uDdDdPfwX1Co59iCt//ileWApHA2KwANgHzLKKc2Ad6X/pezZ5p/TafXY8KR2KqWhApgAfL69EwVWraA5o/ORfsYtJA/3TxJqimrDeinpCCkQ/sshC6k0ALFeISeZ4KKv2HA8vKI
     ufoLicenseKey: QVFGVkJXYi8vLy8vQUFBQUtQemZuRTZJa1UwNWxuNVhQRXdaQnNrYlF5UzJJeXd5b0hGSm1JMzhSRUlTVkwvKzR5aTd4cEI5V3kwdkpRMnVNbSsrSTVoTmlteUxJNzNYMjVCTHh0Y1dlNE5xM25NRTA2SU1CdTlPS1Y5c1hoYmw2Y282Rk9scFIvcFBrcE5mMVlYRVYzWXoxUVVzMzMyK21aaVJiMkpLZ3FjWTc5ZzFIYldJamptS3Zna01aOEJSaTZobWVaTTU1WWtoSEtRQlp2R1BqdFM1UjYxLzZXQ2VuYkd6a3MranhVcGNEbm5NNkErb3V5bWlPa2JPYVd4TTJJejk1akZPSXRQRTFRaUpSZG9XdkJuZHR2WHpKMmhsMDhPcHZKVWp1YURDN3l5aW5Xci9uRFg2MnZxRVQrVmdhZUFoanFzYXJkOTlST3FVLzdvREZLRytEVkxPY0lxYU82NzZtZjVxRE9IZTRqZ1Jva3A0VitMS1pHWUg=
+=======
+    vuforiaLicenseKey: 
+    ufoLicenseKey: QWRCWXk2My8vLy8vQUFBQUtNdGhJZHN6aGtEamdsTlFuRlQzSjdaQStsVmlVN2NPY0dvMVN3OXdoWjhtcnYxQ29KMnFvdTZwMTVsbi96TUJPOFpMRTNsRDh0Y3JDRmxyUDBBRFNZOWhaTXUyWmcvN0c0cTBLQm9mZTd3Z3BYRDJUb1E4aVpHdnpEREk3WlJxS2RJcUxsZlVYVFpPc3JpY1lwZWNtR1JMQWpMQVNkZDJqcFZZN3ByaGZOZ1JoNWp4cWJmTlBKVVl6amZDUzZ1T2lQeWxKWGJaMytncXZnTjlMOVhrRjFmMWN5bWw3eml5K21vWXI2NFIrNXVxWjlmMkphN3pLL2lWbmhhYlZKNjZjd096RmdDV1gzUlNUc0JwUUNrZlNMSTF1S0ZwNkZ3U2Z6WXhvKzJOMUZkbmlQQy8rcDBMQ0xtajRMcldhV0RoUS9BZVpGS3p5emgwSzNHRThyVExRcTN5Q1NRenJaL1Q0ZjQ5alc2LzBPd3I=
+>>>>>>> 3811dd31989c61717040fe07dbe538aab636215b
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
@@ -43,8 +48,12 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad: []
-    dataSetsToActivate: []
+    dataSetsToLoad:
+    - VuforiaMars_Images
+    - VuforiaMars_VuMark
+    dataSetsToActivate:
+    - VuforiaMars_Images
+    - VuforiaMars_VuMark
   videoBackground:
     clippingMode: 0
     numDivisions: 2
