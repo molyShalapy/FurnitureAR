@@ -17,11 +17,6 @@ public class Login : MonoBehaviour {
         btnLogin.onClick.AddListener(() => LoginAuth( Email.text, Password.text));
 
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
     public void LoginAuth(string email, string password)
     {
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
@@ -36,7 +31,6 @@ public class Login : MonoBehaviour {
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync error: " + task.Exception);
                 if (task.Exception.InnerExceptions.Count > 0)
-                    //  UpdateErrorMessage(task.Exception.InnerExceptions[0].Message);
                     ErrorText.text = "You can't sign in with this email or password!";
 
                 return;
@@ -46,7 +40,6 @@ public class Login : MonoBehaviour {
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
 
-            //SceneManager.LoadScene("ResultScene");
         });
     }
 }

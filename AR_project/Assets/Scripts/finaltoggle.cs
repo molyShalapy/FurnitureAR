@@ -16,10 +16,6 @@ public class finaltoggle : MonoBehaviour {
     }
 
   
-    // Update is called once per frame
-    void Update () {
-		
-	}
 
     public Color ToColor(string color)
     {

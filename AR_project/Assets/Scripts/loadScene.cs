@@ -9,8 +9,7 @@ public class loadScene : MonoBehaviour {
     public void LoadResultScene( )
     {
         Debug.Log(openScene);
-        // Application.LoadLevel("ResultScene");
-        SceneManager.LoadScene(openScene);//, LoadSceneMode.Additive);
+        SceneManager.LoadScene(openScene);
         
 
     }
