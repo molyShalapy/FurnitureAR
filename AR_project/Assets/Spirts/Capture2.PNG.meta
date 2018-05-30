@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 8cabf95da636cb64ea5015064cc62364
-timeCreated: 1527008998
+guid: 3ca45f25718d2aa49a1362cf5e53b517
+timeCreated: 1527674668
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: pattern_1
-    21300002: pattern_2
-    21300004: pattern_3
-    21300006: pattern_4
-    21300008: pattern_8
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -45,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,77 +88,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: pattern_1
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 274
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern_2
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 275
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern_3
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 273
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern_4
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 275
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern_8
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 276
-        width: 5
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
