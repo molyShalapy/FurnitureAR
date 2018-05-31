@@ -164,8 +164,6 @@ public class Scrollerview : MonoBehaviour {
     {
         MyProduct = p;
         SceneManager.LoadScene("ProductDetailsScreen");
-
-
     }
 
 }
