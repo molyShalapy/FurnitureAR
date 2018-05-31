@@ -7,25 +7,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Scrollerview : MonoBehaviour {
 
+public class ImageScrollViewer : MonoBehaviour {
+    List<Product> allprod;
     public GameObject prefab;
-    public Dropdown categDDL;
-    public Dropdown modelDDL;
     public GameObject loadingPrefab;
-    public static Product MyProduct { get; set; }
 
-    void Awake() {
+    // Use this for initialization
+    void Awake()
+    {
         MyProduct = new Product();
         InitializeFirebase();
     }
-
-    List<Product> allprod;
-
-
-/*****************************all data*******************************************/
-    void InitializeFirebase()   
+    void InitializeFirebase()
     {
+        Debug.Log("bad2");
         allprod = new List<Product>();
         FirebaseApp app = FirebaseApp.DefaultInstance;
         app.SetEditorDatabaseUrl("https://ar-v1-ce36f.firebaseio.com/");
@@ -51,72 +47,30 @@ public class Scrollerview : MonoBehaviour {
                             image = childSnapshot.Child("image").Value.ToString()
                         });
                     }
-                 //   Populate(allprod);
+                    Debug.Log("gab mn l db");
+                    Populate(allprod);
                 }
             };
     }
 
-    /**********************************Search*******************************************/
-    public GameObject content;
-    enum categories { chair = 1, sofa = 2, table = 3 }
-    enum models { modern = 1, classic = 2 }
-    string model, category;
-    public void search()
-    {
-                 
-        List<Product> filter = new List<Product>();
-        if (categDDL.value > 0 && modelDDL.value > 0)
-        {
-            foreach (Product p in allprod)
-                if ((p.category == ((categories)categDDL.value).ToString()) && ((p.model == ((models)modelDDL.value).ToString())))
-                {
-                    filter.Add(p);
-                }
-
-        }
-        else if (categDDL.value > 0)
-        {
-            foreach (Product p in allprod)
-                if ((p.category == ((categories)categDDL.value).ToString()))
-                {
-                    filter.Add(p);
-                }
-        }
-
-        else if (modelDDL.value > 0)
-        {
-            foreach (Product p in allprod)
-                if (((p.model == ((models)modelDDL.value).ToString())))
-                {
-                    filter.Add(p);
-                }
-        }
-        foreach (Transform child in content.transform)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-        Populate(filter); //## byrsm 3al 2deem 
-
-    }
-    /***************************Draw*****************************************/
-    public  void Populate( List<Product> prod)
+/****************************Draw*********************************/
+    public void Populate(List<Product> prod)
     {
         GameObject newObj;
+        Debug.Log("da5l yrsm");
+
 
         for (int t = 0; t < prod.Count; t++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
             //## static 
             AddButton(newObj, prod[t]);
-            newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
-
-           // newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
-            //newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
-
+         //   newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
+          //  newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
 
         }
     }
-   
+
     void AddButton(GameObject obj, Product p1)
     {
         var button = obj.transform.GetComponentInChildren<Button>();
@@ -124,6 +78,8 @@ public class Scrollerview : MonoBehaviour {
         StartCoroutine(loadSpriteImageFromUrl(p1.image, obj));
 
     }
+
+
 
     /*******************************add image*************************************/
 
@@ -160,14 +116,16 @@ public class Scrollerview : MonoBehaviour {
     }
 
 
+    // Update is called once per frame
+    public static Product MyProduct { get; set; }
 
-    
-  
     /**********************************Details***************************************************/
-    public void OnPointerClick(Product p )
+    public void OnPointerClick(Product p)
     {
+        MyProduct = new Product();
         MyProduct = p;
         SceneManager.LoadScene("ProductDetailsScreen");
-    }
 
+
+    }
 }
