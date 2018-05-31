@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HelpScene.unity
     guid: 5174a81c513c3cb4eb0b06395e10c9e9
+  - enabled: 1
+    path: Assets/Scenes/share.unity
+    guid: b2f79e0d363f009428e5d1298af29da2
