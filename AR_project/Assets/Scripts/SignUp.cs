@@ -17,9 +17,12 @@ public class SignUp : MonoBehaviour {
     public InputField username, Email, Password;
     public Button btnRegister;
     public Text ErrorText;
+    public GameObject loadingprefab;
 
     // Use this for initialization
     void Start () {
+        loadingprefab.SetActive(false);
+
         auth = FirebaseAuth.DefaultInstance;
         FirebaseApp app = FirebaseApp.DefaultInstance;
        
@@ -52,6 +55,7 @@ public class SignUp : MonoBehaviour {
     public void Signup(string username,string email, string password)
     {
         Debug.LogError("sign up nw.");
+        loadingprefab.SetActive(true);
 
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
@@ -94,6 +98,7 @@ public class SignUp : MonoBehaviour {
             reference.Child(newUser.UserId).SetRawJsonValueAsync(json);
             Debug.LogError("user added");
             ErrorText.enabled = false;
+            loadingprefab.SetActive(false);
 
 
             SceneManager.LoadScene("ResultScene");
