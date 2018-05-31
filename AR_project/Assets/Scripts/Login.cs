@@ -11,14 +11,17 @@ public class Login : MonoBehaviour {
     public InputField Email, Password;
     public Button btnLogin, fbLogin;
     public Text ErrorText;
+    public GameObject loadingprefab;
     // Use this for initialization
     void Start () {
+        loadingprefab.SetActive(false);
         auth = FirebaseAuth.DefaultInstance;
         btnLogin.onClick.AddListener(() => LoginAuth( Email.text, Password.text));
 
     }
     public void LoginAuth(string email, string password)
     {
+        loadingprefab.SetActive(true);
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
             if (task.IsCanceled)
@@ -42,7 +45,7 @@ public class Login : MonoBehaviour {
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 user.DisplayName, user.UserId);
             ErrorText.enabled = false;
-
+            loadingprefab.SetActive(false);
             SceneManager.LoadScene("ResultScene");
 
         });

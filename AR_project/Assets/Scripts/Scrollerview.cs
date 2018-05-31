@@ -108,7 +108,7 @@ public class Scrollerview : MonoBehaviour {
             //## static 
             AddButton(newObj, prod[t]);
             newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
-            newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
+            //newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
 
         }
     }
