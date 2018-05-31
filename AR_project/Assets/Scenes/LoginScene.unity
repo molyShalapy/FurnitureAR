@@ -1376,6 +1376,7 @@ MonoBehaviour:
   btnLogin: {fileID: 1364998070}
   fbLogin: {fileID: 456095627}
   ErrorText: {fileID: 803975415}
+  loadingprefab: {fileID: 1880671515}
 --- !u!1 &1380579077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,5 +1993,10 @@ Prefab:
 --- !u!224 &1855210777 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224813719070863868, guid: ba8879ac89b91324794a0fa8a75cc518,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855210776}
+--- !u!1 &1880671515 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1250581304545138, guid: ba8879ac89b91324794a0fa8a75cc518,
     type: 2}
   m_PrefabInternal: {fileID: 1855210776}
