@@ -8,17 +8,24 @@ public class Details : MonoBehaviour
 {
 
     public GameObject loadingPrefab;
-
+    Product ThisProduct;
 
     // Use this for initialization
     void Start()
     {
-        GameObject.Find("txtname").GetComponent<Text>().text = Scrollerview.MyProduct.name;
-        GameObject.Find("txtcategory").GetComponent<Text>().text = Scrollerview.MyProduct.category;
-        GameObject.Find("txtmodel").GetComponent<Text>().text = Scrollerview.MyProduct.model;
-        GameObject.Find("txtColor").GetComponent<Text>().text = Scrollerview.MyProduct.color;
-        GameObject.Find("txtPrice").GetComponent<Text>().text = Scrollerview.MyProduct.price;
-        StartCoroutine(loadSpriteImageFromUrl(Scrollerview.MyProduct.image, GameObject.Find("productImg").GetComponent<Image>()));
+        if (Scrollerview.MyProduct.name != null)
+            ThisProduct = Scrollerview.MyProduct;
+        else
+            ThisProduct = ImageScrollViewer.MyProduct;
+
+
+
+        GameObject.Find("txtname").GetComponent<Text>().text = ThisProduct.name;
+        GameObject.Find("txtcategory").GetComponent<Text>().text = ThisProduct.category;
+        GameObject.Find("txtmodel").GetComponent<Text>().text = ThisProduct.model;
+        GameObject.Find("txtColor").GetComponent<Text>().text = ThisProduct.color;
+        GameObject.Find("txtPrice").GetComponent<Text>().text = ThisProduct.price;
+        StartCoroutine(loadSpriteImageFromUrl(ThisProduct.image, GameObject.Find("productImg").GetComponent<Image>()));
 
     }
 

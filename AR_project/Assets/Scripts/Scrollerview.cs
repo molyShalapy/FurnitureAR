@@ -13,9 +13,10 @@ public class Scrollerview : MonoBehaviour {
     public Dropdown categDDL;
     public Dropdown modelDDL;
     public GameObject loadingPrefab;
-
+    public static Product MyProduct { get; set; }
 
     void Awake() {
+        MyProduct = new Product();
         InitializeFirebase();
     }
 
@@ -50,7 +51,7 @@ public class Scrollerview : MonoBehaviour {
                             image = childSnapshot.Child("image").Value.ToString()
                         });
                     }
-                    Populate(allprod);
+                 //   Populate(allprod);
                 }
             };
     }
@@ -108,7 +109,10 @@ public class Scrollerview : MonoBehaviour {
             //## static 
             AddButton(newObj, prod[t]);
             newObj.transform.GetComponentInChildren<Text>().text = prod[t].name;
+
+           // newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
             //newObj.transform.GetComponentInChildren<Text>().text = prod[t].price + "L.E";
+
 
         }
     }
@@ -157,8 +161,8 @@ public class Scrollerview : MonoBehaviour {
 
 
 
-    public static Product MyProduct { get; set; }
-
+    
+  
     /**********************************Details***************************************************/
     public void OnPointerClick(Product p )
     {
