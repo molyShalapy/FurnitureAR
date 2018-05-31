@@ -12,6 +12,8 @@ public class Scrollerview : MonoBehaviour {
     public GameObject prefab;
     public Dropdown categDDL;
     public Dropdown modelDDL;
+    public GameObject loadingPrefab;
+
 
     void Awake() {
         InitializeFirebase();
@@ -127,6 +129,8 @@ public class Scrollerview : MonoBehaviour {
         WWW www = new WWW(URL);
         while (!www.isDone)
         {
+            loadingPrefab.SetActive(true);
+
             Debug.Log("Download image on progress" + www.progress);
             yield return null;
         }
@@ -146,6 +150,8 @@ public class Scrollerview : MonoBehaviour {
 
             var myim = obj.transform.GetComponentInChildren<Image>();
             myim.sprite = sprite;
+            loadingPrefab.SetActive(false);
+
         }
     }
 

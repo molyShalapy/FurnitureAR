@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Details : MonoBehaviour
 {
 
+    public GameObject loadingPrefab;
 
 
     // Use this for initialization
@@ -46,6 +47,8 @@ public class Details : MonoBehaviour
 
 
             obj.sprite = sprite;
+            loadingPrefab.SetActive(false);
+
         }
 
     }

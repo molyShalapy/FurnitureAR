@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 089a9de3ffbafec40949a6c47b4cbff5
-timeCreated: 1527716341
+guid: 89c02e1122a2e42499258d8c43497b39
+timeCreated: 1527754214
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pattern (2)_2
-    21300002: pattern (2)_5
+    21300000: pattern_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -92,27 +91,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pattern (2)_2
+      name: pattern_1
       rect:
         serializedVersion: 2
-        x: 189
-        y: 196
+        x: 272
+        y: 307
         width: 51
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pattern (2)_5
-      rect:
-        serializedVersion: 2
-        x: 489
-        y: 33
-        width: 51
-        height: 34
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
