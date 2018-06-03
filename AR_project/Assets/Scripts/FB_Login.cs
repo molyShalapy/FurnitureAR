@@ -17,18 +17,14 @@ public class FB_Login : MonoBehaviour
     {
         Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
-        // userIdText.Text = "";
         Login_btn.onClick.AddListener(() => LogIn());
-        //Share_btn.onClick.AddListener(() => ShareBtn());
 
         if (!FB.IsInitialized)
         {
-            // Initialize the Facebook SDK
             FB.Init(InitCallback);
         }
         else
         {
-            // Already initialized, signal an app activation App Event
             FB.ActivateApp();
         }
     }
@@ -42,8 +38,6 @@ public class FB_Login : MonoBehaviour
             // Continue with Facebook SDK
             // ...
             Debug.LogError("Succedd");
-
-      
         }
         else
         {
@@ -58,7 +52,6 @@ public class FB_Login : MonoBehaviour
     {
         if (!FB.IsInitialized)
         {
-            // Initialize the Facebook SDK
             FB.Init(InitCallback);
         }
         FB.LogInWithReadPermissions(callback: OnLogIn);
@@ -75,7 +68,6 @@ public class FB_Login : MonoBehaviour
             Debug.LogError("User sign tmam");
 
         }
-        //SceneManager.LoadSceneAsync("ResultScene");
 
     }
 
@@ -85,17 +77,5 @@ public class FB_Login : MonoBehaviour
  new System.Uri("https://developers.facebook.com/"), "Good porgram", "check it out"
 
 );
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

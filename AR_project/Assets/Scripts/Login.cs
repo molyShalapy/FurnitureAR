@@ -12,6 +12,9 @@ public class Login : MonoBehaviour {
     public Button btnLogin, fbLogin;
     public Text ErrorText;
     public GameObject loadingprefab;
+    public GameObject gameObject;
+    public GameObject gameObjectPrevious;
+
     // Use this for initialization
     void Start () {
         loadingprefab.SetActive(false);
@@ -46,7 +49,8 @@ public class Login : MonoBehaviour {
                 user.DisplayName, user.UserId);
             ErrorText.enabled = false;
             loadingprefab.SetActive(false);
-            SceneManager.LoadScene("ResultScene");
+            gameObject.GetComponent<Canvas>().enabled = true;
+            gameObjectPrevious.GetComponent<Canvas>().enabled = false;
 
         });
     }
