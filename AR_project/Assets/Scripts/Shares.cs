@@ -17,7 +17,7 @@ public class Shares : MonoBehaviour {
     Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 	
        // userIdText.Text = "";
-        //Login_btn.onClick.AddListener(() => LogIn());
+        Login_btn.onClick.AddListener(() => LogIn());
         Share_btn.onClick.AddListener(() => ShareBtn());
 
         if (!FB.IsInitialized)
@@ -103,26 +103,26 @@ public class Shares : MonoBehaviour {
     Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 		
             AccessToken token = AccessToken.CurrentAccessToken;
-            Firebase.Auth.Credential credential =
-    Firebase.Auth.FacebookAuthProvider.GetCredential(token+"");
-            auth.SignInWithCredentialAsync(credential).ContinueWith(task => {
-                if (task.IsCanceled)
-                {
-                    Debug.LogError("SignInWithCredentialAsync was canceled.");
-                    return;
-                }
-                if (task.IsFaulted)
-                {
-                    Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
-                    return;
-                }
+    //        Firebase.Auth.Credential credential =
+    //Firebase.Auth.FacebookAuthProvider.GetCredential(token+"");
+    //        auth.SignInWithCredentialAsync(credential).ContinueWith(task => {
+    //            if (task.IsCanceled)
+    //            {
+    //                Debug.LogError("SignInWithCredentialAsync was canceled.");
+    //                return;
+    //            }
+    //            if (task.IsFaulted)
+    //            {
+    //                Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+    //                return;
+    //            }
 
-                Firebase.Auth.FirebaseUser newUser = task.Result;
-                Debug.LogFormat("User signed in successfully: {0} ({1})",
-                    newUser.DisplayName, newUser.UserId);
-            userIdText.text =  newUser.UserId;
+    //            Firebase.Auth.FirebaseUser newUser = task.Result;
+    //            Debug.LogFormat("User signed in successfully: {0} ({1})",
+    //                newUser.DisplayName, newUser.UserId);
+    //        userIdText.text =  newUser.UserId;
 					
-            });
+    //        });
             Debug.LogError("User sign tmam");
 
         }
@@ -130,6 +130,11 @@ public class Shares : MonoBehaviour {
 
     public void ShareBtn()
     {
+        if (!FB.IsInitialized)
+        {
+            // Initialize the Facebook SDK
+            FB.Init(InitCallback);
+        }
         FB.ShareLink(
  new System.Uri("https://developers.facebook.com/"),"Good porgram","check it out"
 
