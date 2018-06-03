@@ -189,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627609999}
+      - m_Target: {fileID: 0}
         m_MethodName: ShareBtn
         m_Mode: 1
         m_Arguments:
@@ -1213,6 +1213,7 @@ GameObject:
   - component: {fileID: 1028988368}
   - component: {fileID: 1028988370}
   - component: {fileID: 1028988369}
+  - component: {fileID: 1028988371}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1271,6 +1272,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028988367}
+--- !u!114 &1028988371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028988367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68042153fb38b049b512c8ee7f2c016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotPreview: {fileID: 1028988367}
+  Share_btn: {fileID: 94216332}
 --- !u!1 &1046259248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1962,6 @@ GameObject:
   - component: {fileID: 1627609996}
   - component: {fileID: 1627609998}
   - component: {fileID: 1627609997}
-  - component: {fileID: 1627609999}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2010,20 +2023,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1627609995}
---- !u!114 &1627609999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627609995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362b8689efe4cd042be2c649dbdb31d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userIdText: {fileID: 0}
-  Login_btn: {fileID: 0}
-  Share_btn: {fileID: 0}
 --- !u!1 &2003772840
 GameObject:
   m_ObjectHideFlags: 0
