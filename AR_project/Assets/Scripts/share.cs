@@ -5,15 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using Facebook.Unity;
 public class share : MonoBehaviour {
+
     Texture2D screenshotTexture;
     byte[] data;
     public   GameObject screenshotPreview;
     public Button Share_btn;
+
     // Use this for initialization
-    private void Awake()
+    private void nada()
     {
-        //Login_btn.onClick.AddListener(() => LogIn());
-        Share_btn.onClick.AddListener(() => ShareBtn());
+       
 
         if (!FB.IsInitialized)
         {
@@ -26,6 +27,8 @@ public class share : MonoBehaviour {
             FB.ActivateApp();
         }
     }
+
+
     public void InitCallback()
     {
         if (FB.IsInitialized)
@@ -42,6 +45,8 @@ public class share : MonoBehaviour {
             Debug.LogError("Failed to Initialize the Facebook SDK");
         }
     }
+
+
     void Start () {
 
         data = File.ReadAllBytes(capture.imageName);
@@ -56,8 +61,10 @@ public class share : MonoBehaviour {
         // Set the sprite to the screenshotPreview
         screenshotPreview.GetComponent<Image>().sprite = screenshotSprite;
     }
+
     public void ShareBtn()
     {
+        nada();
         FB.ShareLink(
  new System.Uri("https://developers.facebook.com/"), "Good porgram", "check it out"
 

@@ -19,7 +19,5 @@ public class capture : MonoBehaviour {
         Debug.Log("Captured");
         ScreenCapture.CaptureScreenshot(imageName);
         SceneManager.LoadScene("share");
-
-
     }
 }
