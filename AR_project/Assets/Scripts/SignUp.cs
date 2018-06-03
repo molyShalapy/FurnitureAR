@@ -18,8 +18,6 @@ public class SignUp : MonoBehaviour {
     public Button btnRegister;
     public Text ErrorText;
     public GameObject loadingprefab;
-    public GameObject gameObject;
-    public GameObject gameObjectPrevious;
 
     // Use this for initialization
     void Start () {
@@ -102,9 +100,11 @@ public class SignUp : MonoBehaviour {
             ErrorText.enabled = false;
             loadingprefab.SetActive(false);
 
-            gameObject.GetComponent<Canvas>().enabled = true;
-            gameObjectPrevious.GetComponent<Canvas>().enabled = false;
 
+            SceneManager.LoadScene("ResultScene");
+
+
+            //  UpdateErrorMessage("Signup Success");
         });
     }
 

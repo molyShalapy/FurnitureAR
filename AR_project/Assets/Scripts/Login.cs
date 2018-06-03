@@ -14,7 +14,6 @@ public class Login : MonoBehaviour {
     public GameObject loadingprefab;
     public GameObject gameObject;
     public GameObject gameObjectPrevious;
-
     // Use this for initialization
     void Start () {
         loadingprefab.SetActive(false);
