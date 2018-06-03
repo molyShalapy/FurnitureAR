@@ -12,9 +12,10 @@ public class share : MonoBehaviour {
     public Button Share_btn;
 
     // Use this for initialization
-    private void nada()
+    void Awake()
     {
-       
+
+        Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
         if (!FB.IsInitialized)
         {
@@ -64,7 +65,7 @@ public class share : MonoBehaviour {
 
     public void ShareBtn()
     {
-        nada();
+        //nada();
         FB.ShareLink(
  new System.Uri("https://developers.facebook.com/"), "Good porgram", "check it out"
 
